@@ -1,0 +1,237 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  padding-bottom: 18px;
+  border-bottom: 2px solid $gray;
+  z-index: 10;
+
+  .mobile-menu {
+    display: none;
+  }
+  .mobile-navbar {
+    display: none;
+  }
+
+  .container {
+    padding: 0 25px;
+    display: block;
+
+    a {
+      text-decoration: none;
+      h1 {
+        font-size: 1.1rem;
+        padding: 40px 0 35px;
+        color: #000000;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $darkGray;
+        }
+      }
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      nav {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        a {
+          text-decoration: none;
+          font-size: 0.8rem;
+          margin: 0 1rem;
+          padding: 0.2rem;
+          color: #000000;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $darkGray;
+          }
+        }
+      }
+
+      .fas.fa-search,
+      .fas.fa-shopping-basket {
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $darkGray;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    padding-bottom: 0;
+
+    .container {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+
+      .menu-left {
+        display: flex;
+        align-items: center;
+
+        .fa-bars {
+          font-size: 1.3rem;
+          padding: 10px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $darkGray;
+          }
+        }
+
+        a {
+          text-decoration: none;
+
+          h1 {
+            font-size: 1.1rem;
+            color: #000000;
+            margin-left: 10px;
+            padding: 10px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              color: $darkGray;
+            }
+          }
+        }
+      }
+
+      .menu-right {
+        display: flex;
+        align-items: center;
+
+        .fa-search,
+        .fa-shopping-basket {
+          font-size: 1.3rem;
+          padding: 10px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: $darkGray;
+          }
+        }
+
+        .fa-shopping-basket {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .mobile-navbar {
+    transform: translateX(-105%);
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background: $darkGray;
+    z-index: 20;
+    overflow-y: scroll;
+    box-shadow: 1px 0px 5px 0px rgba(163, 163, 163, 1);
+    transition: all 0.2s ease-in-out;
+
+    nav {
+      height: 100%;
+      width: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .fa-times {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: #ffffff;
+        color: $darkGray;
+        font-size: 1.3rem;
+        padding: 10px 12px;
+        border-radius: 50%;
+        border: 1px solid $darkGray;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 0;
+        font-size: 0.9rem;
+        color: #ffffff;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          color: $darkGray;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    .mobile-menu {
+      padding: 0px 15px;
+
+      .menu-left {
+        .fa-bars {
+          font-size: 1.2rem;
+          padding: 5px;
+          margin-right: 2px;
+        }
+
+        a {
+          h1 {
+            font-size: 1.1rem;
+            margin-left: 5px;
+            padding: 15px 7px;
+            letter-spacing: 1px;
+            border-left: 2px solid $gray;
+          }
+        }
+      }
+
+      .menu-right {
+        .fa-search,
+        .fa-shopping-basket {
+          font-size: 1.2rem;
+          padding: 5px;
+          cursor: pointer;
+        }
+
+        .fa-shopping-basket {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+.toggle-mobile-nav {
+  transform: translateX(0%);
+}

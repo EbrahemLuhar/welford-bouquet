@@ -1,0 +1,28 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i|Montserrat:300,400,600&display=swap");
+
+/* Imported sass files */
+@import "reset";
+@import "variables";
+
+@import "header";
+@import "landing-section";
+@import "favourites-section";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1250px;
+}
